@@ -1,0 +1,59 @@
+@import '../../assets/css/variable';
+
+.container {
+    margin: 0;
+    padding: 0;
+    margin: auto 0;
+    position: relative;
+
+    .dataHolder {
+        position: relative;
+        border: none;
+        background: $pangatlong-color;
+        cursor: pointer;
+        color: white;
+        margin: 0;
+        width: 8rem;
+        padding: 0.5rem 0;
+        font-size: 1rem;
+        font-family: 'Fredoka', sans-serif;
+        font-weight: 600;
+        border-radius: 8px;
+        text-transform: capitalize;
+    }
+
+    .icon {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 9px;
+    }
+
+    .options {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        top: 2.5rem;
+        border-radius: 8px;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .choices {
+        border: none;
+        overflow: hidden;
+        background: transparent;
+        padding: 5px 0;
+        cursor: pointer;
+        font-family: 'Fredoka', sans-serif;
+        font-size: 1rem;
+        transition: transfomr 0.3s ease;
+        text-transform: capitalize;
+    }
+
+    .choices:hover {
+        background-color: #f2ca47;
+    }
+}

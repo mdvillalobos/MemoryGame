@@ -1,0 +1,85 @@
+@import '../../assets/css/variable';
+
+.card {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+
+    .cardInner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+    }
+    
+    .cardFront,
+    .cardBack {
+        position: absolute;
+        inset: 0;
+        border-radius: 0.5rem;
+        background-color: $pangatlong-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        backface-visibility: hidden;
+        pointer-events: none;     
+        color: white;
+    }
+
+    .cardBack {
+        transform: rotateY(180deg);
+    }
+
+    &.flipped .cardInner {
+        animation: scaleLiftAndFlip 0.6s ease forwards;
+        pointer-events: none;
+    }
+
+    &.matched {
+        pointer-events: none;
+    }
+
+    &:not(.flipped) .cardInner {
+        animation: scaleLiftAndFlipBack 0.6s ease forwards;
+    }
+
+    &.shuffle .cardInner {
+        animation: scaleLiftAndFlip 0.6s ease;
+    }
+
+    @media (max-width: 320px) {
+        .cardFront
+        .cardBack {
+            font-size: 0.3rem;
+        }
+    }
+
+}
+
+@keyframes scaleLiftAndFlip {
+    0% {
+        transform: scale(1) rotateY(0);
+    }
+    30% {
+        transform: scale(1.1) rotateY(0); /* lift (scale up) */
+    }
+    100% {
+        transform: scale(1) rotateY(180deg); /* flip + settle */
+    }
+    }
+
+@keyframes scaleLiftAndFlipBack {
+    0% {
+        transform: scale(1) rotateY(180deg);
+    }
+    30% {
+        transform: scale(1.1) rotateY(180deg); /* lift (scale up) */
+    }
+    100% {
+        transform: scale(1) rotateY(0); /* flip back + settle */
+    }
+}
+

@@ -1,0 +1,104 @@
+@import '../../assets/css/variable';
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-family: 'Fredoka', sans-serif;
+    color: black;
+
+    .banner {
+        padding: 1rem;
+        width: 30vw;
+        background-color: #fff;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        border-radius: 8px;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .icon {
+        color: #f2ca47;
+        text-align: center;
+        font-size: 5rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    .youWin {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    .resetBtn {
+        border: none;
+        font-family: 'Fredoka', sans-serif ;
+        padding: 0.7rem;
+        border-radius: 7px;
+        background-color: $primaryBg-color;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        color: white;
+    }
+
+    .newScore {
+        text-align: center;
+    }
+
+    .dataContainer {
+        display: flex;
+    }
+
+    .data {
+        background-color: $primaryBg-color;
+        width: 100%;
+        text-align: center;
+        color: white;
+        border-radius: 5px;
+        padding: 15px 0;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .data:last-child {
+        margin-left: 3rem;
+    }
+
+    @media (max-width: 768px) {
+        .banner {
+            width: 50vw;
+        }
+    }
+
+    @media (max-width: 560px) {
+        .banner {
+            width: 80vw;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .banner {
+            width: 80vw;
+        }
+    }
+}

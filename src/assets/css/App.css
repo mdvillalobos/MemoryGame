@@ -1,0 +1,6 @@
+body {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0; /* remove default margin */
+    background-color: #799d9f; /* your desired color */
+}
