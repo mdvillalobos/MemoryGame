@@ -1,4 +1,3 @@
-import React from 'react'
 import types from './Banner.module.scss'
 import { IoMdTrophy } from "react-icons/io";
 
