@@ -118,6 +118,7 @@ const GamePage = () => {
                     setIsOpen = {() => setIsOpen({ open: false, isBeated: false })}
                 />
             ) : null}
+            
             <section className={styles.header}>
                 <div className={styles.highScore}>
                     <PiCrownSimpleFill className={styles.icon}/>

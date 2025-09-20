@@ -28,8 +28,9 @@ const Banner = ({ moves, time, isBeated, newGame, setIsOpen }: BannerProps) => {
                 <button 
                     onClick={() => { setIsOpen(), newGame()}}
                     className={types.resetBtn}
+                    aria-label="Start a new game"
                 >
-                    New game
+                        New game
                 </button>
            </div>
         </section>

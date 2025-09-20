@@ -23,6 +23,7 @@ const DropDown = ({ difficulty, setDifficulty }: DropDownProps) => {
             <button
                 className={styles.dataHolder}
                 onClick={() => setIsOpen(!isOpen)}
+                aria-label="Choose Difficulty"
             >
                 {difficulty}
                 <span className={styles.icon}>{isOpen ? <FaCaretUp/> : <FaCaretDown/>}</span>
@@ -35,6 +36,7 @@ const DropDown = ({ difficulty, setDifficulty }: DropDownProps) => {
                             key={index}
                             onClick={() => { setDifficulty(data), setIsOpen(!isOpen)}}
                             className={styles.choices}
+                            aria-label={`${data}`}
                         >
                             {data}
                         </button>
